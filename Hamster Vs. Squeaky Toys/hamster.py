@@ -509,8 +509,8 @@ def get_high_score():
     # Create a path object for the file.
     path = Path('high_score.json')
 
-    # Check if the pathh exists.
-    if path.exists():
+    # Check if the path exists.
+    if path.exists() and len(path.read_text()) > 0:
         # If so, get the current high score.
         contents = path.read_text()
         high_score = json.loads(contents)
